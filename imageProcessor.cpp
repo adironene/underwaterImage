@@ -2,6 +2,7 @@
 #include <opencv2/core/mat.hpp>
 #include <opencv2/core/core.hpp>
 #include "opencv2/imgproc/imgproc.hpp"
+#include "opencv2/highgui/highgui.hpp"
 
 using namespace std;
 using namespace cv;
@@ -64,27 +65,32 @@ void balance_white(cv::Mat mat)
 
 int main(int argc, char **argv)
 {
-    // Mat image = imread(argv[1], 1);
+    Mat image = imread(argv[1], 1);
     // for (int i = 1; i <= 1356; i++)
     // {
     // cout<<i<<endl;
-    string s = "/Users/phoebetang/Downloads/1.png";
+    // string s = "/Users/phoebetang/Downloads/gate14.png";
     // s += to_string(i);
     // s += ".png";
-    Mat image = imread(s, 1);
+    // Mat image = imread(s, 1);
     int beforeHeight = image.rows;
     int beforeWidth = image.cols;
-    namedWindow("before", WINDOW_AUTOSIZE);
+    // namedWindow("before", WINDOW_AUTOSIZE);
     resize(image, image, Size(512, 512));
-    imshow("after white balance", image);
+    // imshow("after white balance", image);
     balance_white(image);
-    imshow("before deblurr", image);
+    // imshow("before deblurr", image);
     contrast(image);
-    // resize(result, result, Size(beforeWidth, beforeHeight));
-    namedWindow("with deblurr", WINDOW_AUTOSIZE);
-    imshow("with deblurr", image);
-    // cv::imwrite(s, image);
-    waitKey(0);
+    // cvtColor( image, image, COLOR_BGRA2GRAY );
+    // imshow("before equalize", image);
+    // equalizeHist( image, image );
+    // cvtColor(image, image, COLOR_GRAY2BGR);
+    // cout<<"yeah yeet"<<endl;
+    resize(image, image, Size(beforeWidth, beforeHeight));
+    // namedWindow("with deblurr", WINDOW_AUTOSIZE);
+    // imshow("with deblurr", image);
+    cv::imwrite(argv[1], image);
+    // waitKey(0);
     // }
     return 0;
 }
