@@ -5,7 +5,10 @@ When a camera is underwater, the photos taken are usually tinted by a green-blue
 This code manipulates the pixel values of each color channel and estimates the correct coler value of each pixel.
 
 # requirements
-download opencv library
+- download opencv library.
+- one can access the latest version through
+- [the openCV website](https://docs.opencv.org/master/df/d65/tutorial_table_of_content_introduction.html)
+- [the openCV github page](https://github.com/opencv/opencv)
 
 # results
 
