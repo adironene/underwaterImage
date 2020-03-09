@@ -6,3 +6,8 @@ This code manipulates the pixel values of each color channel and estimates the c
 
 # requirements
 download opencv library
+
+# results
+
+![underwater](https://user-images.githubusercontent.com/49921653/76188591-c026a180-6195-11ea-94aa-3f76fb23354d.jpeg)
+![underwater (1)](https://user-images.githubusercontent.com/49921653/76188604-c9b00980-6195-11ea-9351-62b097265978.jpeg)
